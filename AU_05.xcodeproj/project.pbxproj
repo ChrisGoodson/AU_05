@@ -13,6 +13,7 @@
 		8342FBDA299B4736005926F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8342FBD8299B4736005926F5 /* Main.storyboard */; };
 		8342FBDC299B4737005926F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8342FBDB299B4737005926F5 /* Assets.xcassets */; };
 		8342FBDF299B4737005926F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8342FBDD299B4737005926F5 /* LaunchScreen.storyboard */; };
+		8342FBE7299B56B1005926F5 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8342FBE6299B56B1005926F5 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8342FBDB299B4737005926F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8342FBDE299B4737005926F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8342FBE0299B4737005926F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8342FBE6299B56B1005926F5 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				8342FBD2299B4736005926F5 /* AppDelegate.swift */,
 				8342FBD4299B4736005926F5 /* SceneDelegate.swift */,
 				8342FBD6299B4736005926F5 /* ViewController.swift */,
+				8342FBE6299B56B1005926F5 /* NavigationViewController.swift */,
 				8342FBD8299B4736005926F5 /* Main.storyboard */,
 				8342FBDB299B4737005926F5 /* Assets.xcassets */,
 				8342FBDD299B4737005926F5 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8342FBE7299B56B1005926F5 /* NavigationViewController.swift in Sources */,
 				8342FBD7299B4736005926F5 /* ViewController.swift in Sources */,
 				8342FBD3299B4736005926F5 /* AppDelegate.swift in Sources */,
 				8342FBD5299B4736005926F5 /* SceneDelegate.swift in Sources */,

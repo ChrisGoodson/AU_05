@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func nativage(_ sender: UIButton) {
+        let nativateController = NavigationViewController()
+        self.present(nativateController, animated: true, completion: nil)
+    }
+    
 }
 
