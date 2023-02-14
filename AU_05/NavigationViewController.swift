@@ -7,13 +7,20 @@
 
 import UIKit
 
+
+
 class NavigationViewController: UIViewController {
 
+    @IBOutlet weak var canLabel: UILabel!
+    @IBOutlet weak var mexLabel: UILabel!
+    @IBOutlet weak var ukLabel: UILabel!
+    @IBOutlet weak var euroLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+    
     
 
     /*
