@@ -45,7 +45,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Convert"/>
                                                 <connections>
-                                                    <action selector="nativage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VbU-9d-Mwz"/>
+                                                    <action selector="navigate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q64-VI-0Js"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -88,16 +88,16 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dRW-Fr-Gg9">
                                                         <rect key="frame" x="304" y="199.33333333333337" width="89" height="124"/>
                                                         <subviews>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Canadian Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-P2-9Tc">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Canadian Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-P2-9Tc" userLabel="canSwitch">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="31"/>
                                                             </switch>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Canadian Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="XKN-W2-y0I">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Canadian Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="XKN-W2-y0I" userLabel="mexSwitch">
                                                                 <rect key="frame" x="0.0" y="30.999999999999943" width="91" height="31"/>
                                                             </switch>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Canadian Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="dgO-Ta-aIK">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Canadian Dollar" translatesAutoresizingMaskIntoConstraints="NO" id="dgO-Ta-aIK" userLabel="ukSwitch">
                                                                 <rect key="frame" x="0.0" y="61.999999999999943" width="91" height="31"/>
                                                             </switch>
-                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1tG-5V-zmI">
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1tG-5V-zmI" userLabel="euroSwitch">
                                                                 <rect key="frame" x="0.0" y="92.999999999999943" width="91" height="31"/>
                                                             </switch>
                                                         </subviews>
@@ -131,10 +131,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="canSlider" destination="dRW-Fr-Gg9" id="cqv-YB-bzy"/>
-                        <outlet property="euroSlider" destination="1tG-5V-zmI" id="3XX-BZ-omW"/>
-                        <outlet property="mexSlider" destination="XKN-W2-y0I" id="RQv-Fn-9BM"/>
-                        <outlet property="ukSlider" destination="dgO-Ta-aIK" id="LJd-Nd-Eec"/>
+                        <outlet property="canSwitch" destination="JtI-P2-9Tc" id="ecS-3h-kLA"/>
+                        <outlet property="euroSwitch" destination="1tG-5V-zmI" id="v2A-aQ-rW9"/>
+                        <outlet property="mexSwitch" destination="XKN-W2-y0I" id="xkx-Rv-ygM"/>
+                        <outlet property="ukSwitch" destination="dgO-Ta-aIK" id="Who-bg-54Q"/>
+                        <outlet property="usdField" destination="FkX-tz-qaK" id="VWI-9R-djn"/>
                         <segue destination="hTW-TZ-unP" kind="presentation" identifier="toNavigation" id="3fE-Sq-4bV"/>
                     </connections>
                 </viewController>
@@ -154,13 +155,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbJ-dz-YIK">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="146.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="137"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aJq-vv-2QS">
-                                        <rect key="frame" x="0.0" y="146.33333333333334" width="393" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="137" width="393" height="0.0"/>
                                         <subviews>
                                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter USD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TcU-2v-Tge">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="75"/>
@@ -186,34 +187,34 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nX8-JX-zmf">
-                                        <rect key="frame" x="0.0" y="146.33333333333331" width="393" height="636.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="137" width="393" height="646"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PtJ-XS-GxB">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="636.66666666666663"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="646"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="lLb-gt-lM7">
-                                                        <rect key="frame" x="0.0" y="261" width="305.33333333333331" height="114.66666666666669"/>
+                                                        <rect key="frame" x="0.0" y="265.66666666666669" width="258.33333333333331" height="114.66666666666669"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Canadian Dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6q-Ic-BEa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="305.33333333333331" height="28.666666666666668"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="258.33333333333331" height="28.666666666666668"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Mexican Peso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-Rq-gJV">
-                                                                <rect key="frame" x="0.0" y="28.666666666666686" width="305.33333333333331" height="28.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="28.666666666666629" width="258.33333333333331" height="28.666666666666671"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   UK Pound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIs-1x-ltW">
-                                                                <rect key="frame" x="0.0" y="57.333333333333364" width="305.33333333333331" height="28.666666666666664"/>
+                                                                <rect key="frame" x="0.0" y="57.333333333333307" width="258.33333333333331" height="28.666666666666664"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLw-os-Rm1">
-                                                                <rect key="frame" x="0.0" y="86" width="305.33333333333331" height="28.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="86" width="258.33333333333331" height="28.666666666666671"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -221,39 +222,27 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Kzp-Xk-t1e">
-                                                        <rect key="frame" x="325.33333333333331" y="261" width="67.666666666666686" height="114.66666666666669"/>
+                                                        <rect key="frame" x="278.33333333333331" y="261" width="114.66666666666669" height="124"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEA-gK-Xvr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67.666666666666671" height="28.666666666666668"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FD2-QA-vpP">
-                                                                <rect key="frame" x="0.0" y="28.666666666666686" width="67.666666666666671" height="28.666666666666671"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srd-mJ-TVe">
-                                                                <rect key="frame" x="0.0" y="57.333333333333364" width="67.666666666666671" height="28.666666666666664"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xy0-CM-YQL">
-                                                                <rect key="frame" x="0.0" y="86" width="67.666666666666671" height="28.666666666666671"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-Vt-cjf" userLabel="canSwitch">
+                                                                <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="31"/>
+                                                            </switch>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GmL-1e-LN8" userLabel="mexSwitch">
+                                                                <rect key="frame" x="0.0" y="31" width="116.66666666666667" height="31"/>
+                                                            </switch>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z8h-cj-gVC" userLabel="ukSwitch">
+                                                                <rect key="frame" x="0.0" y="62" width="116.66666666666667" height="31"/>
+                                                            </switch>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-fw-OnX" userLabel="euroSwitch">
+                                                                <rect key="frame" x="0.0" y="93" width="116.66666666666667" height="31"/>
+                                                            </switch>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Kzp-Xk-t1e" firstAttribute="leading" secondItem="lLb-gt-lM7" secondAttribute="trailing" constant="20" id="AQ0-KD-ntg"/>
+                                                    <constraint firstItem="Kzp-Xk-t1e" firstAttribute="leading" secondItem="PtJ-XS-GxB" secondAttribute="trailing" constant="-114.66666666666669" id="AQ0-KD-ntg"/>
                                                     <constraint firstAttribute="trailing" secondItem="Kzp-Xk-t1e" secondAttribute="trailing" id="O99-Oe-QyU"/>
-                                                    <constraint firstItem="Kzp-Xk-t1e" firstAttribute="leading" secondItem="lLb-gt-lM7" secondAttribute="trailing" constant="20" id="Pdd-AT-fZ2"/>
+                                                    <constraint firstItem="Kzp-Xk-t1e" firstAttribute="leading" secondItem="PtJ-XS-GxB" secondAttribute="trailing" constant="-114.66666666666669" id="Pdd-AT-fZ2"/>
                                                     <constraint firstItem="lLb-gt-lM7" firstAttribute="leading" secondItem="PtJ-XS-GxB" secondAttribute="leading" id="duH-O8-dEB"/>
                                                 </constraints>
                                             </stackView>
@@ -278,15 +267,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="canLabel" destination="tEA-gK-Xvr" id="a8E-me-fiY"/>
-                        <outlet property="euroLabel" destination="Xy0-CM-YQL" id="KiI-bO-SVC"/>
-                        <outlet property="mexLabel" destination="FD2-QA-vpP" id="k2u-xV-WFY"/>
-                        <outlet property="ukLabel" destination="Srd-mJ-TVe" id="UuB-nv-zSe"/>
+                        <outlet property="canDollar" destination="A6q-Ic-BEa" id="TKo-ce-Jzq"/>
+                        <outlet property="canSwitch" destination="u9l-Vt-cjf" id="ayc-RD-dOh"/>
+                        <outlet property="euro" destination="tLw-os-Rm1" id="SMT-a9-dVb"/>
+                        <outlet property="euroSwitch" destination="Yy5-fw-OnX" id="Gjc-Dw-BZe"/>
+                        <outlet property="mexPeso" destination="Slx-Rq-gJV" id="hzN-aQ-xLY"/>
+                        <outlet property="mexSwitch" destination="GmL-1e-LN8" id="y4A-nB-1gj"/>
+                        <outlet property="ukPound" destination="xIs-1x-ltW" id="bNw-R5-el0"/>
+                        <outlet property="ukSwitch" destination="z8h-cj-gVC" id="abh-7R-y86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vd-fK-hRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383.9694656488548" y="-13.380281690140846"/>
+            <point key="canvasLocation" x="1147" y="-27"/>
         </scene>
     </scenes>
 </document>
